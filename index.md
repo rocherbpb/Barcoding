@@ -69,7 +69,9 @@ Bayesian phylogenetic analysis can be implemented in [MrBayes](http://nbisweden.
 
 
 ### Species delimitation 
+Rather than attempt to discrimtate species by eyeballing branches from a phylogenetic tree, several methods have been developed to implement a more objective and automated approach to species delimiation.
 #### ABGD
+The method of [Puillandre et al. 20012](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-294X.2011.05239.x) estimates an intra-specific divergence limit in order to detect a "barcode gap" (first significant gap beyond this divergence estimate) and partition the data into groups. Limit and gap inferences are then applied to each group until there is no further partitioning. This method is implemented in Automatic Barcode Gap Discovery for primary species delimitation ([ABGD](https://bioinfo.mnhn.fr/abi/public/abgd/abgdweb.html)).
 
 #### PTP
 
