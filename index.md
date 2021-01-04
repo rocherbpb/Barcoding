@@ -1,6 +1,6 @@
 ## Basic COI barcoding analysis
 ### COI Barcode data
-Raw data will typically consist of 658bp sequence from the COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. 
+Raw data will typically consist of 658bp sequence from the COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. The first step in the analysis involves the contruction of a sequence alignment. This is done using the Muscle algorithm (Edgar, 2004) implemented in SeaView (Gouy et al., 2010), available [here](http://doua.prabi.fr/software/seaview). Amino acid and codon positions can be determined by TranslatorX (Abascal et al., 2010), found [here](http://translatorx.co.uk).
 
 ### Blast analysis
 
