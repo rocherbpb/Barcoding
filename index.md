@@ -79,7 +79,7 @@ set autoclose=yes nowarn=yes;
   charset cd3 = 1-.\3;
 partition p1 = 3:cd1, cd2, cd3;
 set partition = p1;
-  unlink revmat=(all) statefreq=(all) shape=(all) pinvar=(all)  tratio=(all);
+unlink revmat=(all) statefreq=(all) shape=(all) pinvar=(all)  tratio=(all);
   prset applyto=(1) statefreqpr=dirichlet(1,1,1,1);
   prset applyto=(2) statefreqpr=dirichlet(1,1,1,1);
   prset applyto=(3) statefreqpr=dirichlet(1,1,1,1);
