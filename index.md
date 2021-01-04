@@ -38,7 +38,7 @@ The optimal models are output in the ".best_scheme.nex" file
 To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
 
 ```markdown
-#nexus
+# nexus
 begin sets;
   charset cd1 = 2-.\3;
   charset cd2 = 3-.\3;
