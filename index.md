@@ -73,7 +73,8 @@ Rather than attempt to discrimtate species by eyeballing branches from a phyloge
 #### ABGD
 The method of [Puillandre et al. 20012](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-294X.2011.05239.x) estimates an intra-specific divergence limit in order to detect a "barcode gap" (first significant gap beyond this divergence estimate) and partition the data into groups. Limit and gap inferences are then applied to each group until there is no further partitioning. This method is implemented in Automatic Barcode Gap Discovery for primary species delimitation ([ABGD](https://bioinfo.mnhn.fr/abi/public/abgd/abgdweb.html)).
 
-#### PTP
+#### mPTP
+multi-rate Poisson Tree Processes ([mPTP](https://github.com/Pas-Kapli/mptp)) is a tree-based or “phylogeny-aware” method that uses differences in mutation rate in a phylogenetic tree to resolve interspecific and intraspecific diversity. The phylogeneitc trees reconstructed above can be used as the input tree for this analysis. The analysis requires a strictly bifurcating tree, so a Maximum-likelihood tree from IQ-Tree or a Bayesian tree set with Contype=Allcompat from MrBayes is suitable. Minimum branch length was estimated (--minbr_auto) to control for enforced non-zero branch lengths. 
 
 #### RESL
 
