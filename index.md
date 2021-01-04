@@ -1,6 +1,6 @@
 ## COI barcoding analysis
 
-Raw data will typically consist of 568bp sequence from the COI locus acquired via Folmer et al (1994) primers. 
+Raw data will typically consist of 658bp sequence from the COI locus acquired via Folmer et al (1994) primers. 
 
 ### Blast analysis
 
