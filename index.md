@@ -108,11 +108,16 @@ Using the command line version, the minimum branch length is first calculated to
 ```markdown
 mptp --tree_file input_tree_file --minbr_auto fasta_alignment_file --output_file output_filename
 ```
-The minimum branch length threshold will be printed in the screen and it will also be stored in the output file.
+The minimum branch length threshold will be printed in the screen and stored in the output file.
 
 The following command will run Maximum-likelihood species delimitation (minimum branch length of 0.001, from above): 
 ```markdown
 mptp --tree_file input_tree_file --output_file output_filename --ml --multi --minbr 0.001
+```
+
+The outgroup used in the phylogenetic tree can also be specified and excluded: 
+```markdown
+mptp --tree_file input_tree_file --output_file output_filename --ml --multi --minbr 0.001 --outgroup_crop --outgroup outgroup_sequence_name
 ```
 
 
