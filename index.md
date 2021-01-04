@@ -68,7 +68,7 @@ iqtree -s input.fasta -p optimal_partition.best_scheme.nex -m MFP -B 1000
 ```
 
 #### Bayesian analysis
-Bayesian phylogenetic analysis can be implemented in [MrBayes](http://nbisweden.github.io/MrBayes). Here we can implement the optimum partition models obtained from IQ-Tree (using -mset mrbayes). A typical starting point for this analysis consists of two simultaneous runs, each of which were run with four Metropolis-coupled Markov chain Monte Carlo for 10 million steps, a relative burn-in fraction of 25% and a chain temperature of 0.1. Convergence is considered reached when the average standard deviation of split frequencies between the two simultaneous runs reached 0.01, and the potential scale reduction factor values were all approximately 1.0 in the post-burn-in samples. 
+Bayesian phylogenetic analysis can be implemented in [MrBayes](https://academic.oup.com/bioinformatics/article/19/12/1572/257621) (available [here](http://nbisweden.github.io/MrBayes)). Here we can implement the optimum partition models obtained from IQ-Tree (using -mset mrbayes). A typical starting point for this analysis consists of two simultaneous runs, each of which were run with four Metropolis-coupled Markov chain Monte Carlo for 10 million steps, a relative burn-in fraction of 25% and a chain temperature of 0.1. Convergence is considered reached when the average standard deviation of split frequencies between the two simultaneous runs reached 0.01, and the potential scale reduction factor values were all approximately 1.0 in the post-burn-in samples. 
 
 Below is an example block that can be appended to a nexus format alignment to create a MrBayes input file:
 ```markdown
