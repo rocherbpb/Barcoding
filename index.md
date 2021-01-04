@@ -48,7 +48,7 @@ begin sets;
 end;
 
 ```
-This partition file is then used in the following commands to determine optimal models for the partitioned alignment
+This partition file is then used in the following commands to determine optimal models for the partitioned alignment:
 ```markdown
 
 ## Model selection (partitioned)
