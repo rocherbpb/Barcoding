@@ -24,7 +24,7 @@ Potential ways to partition the COI barcode sequence alignment are leave it unpa
 
 ```markdown
 
-### Model selection (unpartitioned)
+## Model selection (unpartitioned)
 iqtree -s input.fasta -m MF
 
 ```
@@ -39,7 +39,7 @@ The optimal models are output in the ".best_scheme.nex" file
 To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
 
 ```markdown
-# nexus
+#nexus
 begin sets;
   charset cd1 = 2-.\3;
   charset cd2 = 3-.\3;
@@ -50,7 +50,7 @@ end;
 This partition file is then used in the following commands to determine optimal models for the partitioned alignment
 ```markdown
 
-# Model selection (partitioned)
+## Model selection (partitioned)
 iqtree -s input.fasta -p partition.file -m MF
 
 ```
@@ -59,7 +59,7 @@ The more likely partition can be determined by finding the one with the lower BI
 The optimal partition and models can then be specified in the reconstruction of an ML tree using the following commands:
 
 ```markdown
-# ML tree recontruction (with ultrafast boostrap appromimation; 1000 reps) with optimal models (from optimal partition) specified in "optimal_partition.best_scheme.nex".
+## ML tree recontruction (with ultrafast boostrap appromimation; 1000 reps) with optimal models (from optimal partition) specified in "optimal_partition.best_scheme.nex".
 iqtree -s input.fasta -p optimal_partition.best_scheme.nex -m MFP -B 1000
 
 ```
