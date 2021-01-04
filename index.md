@@ -69,7 +69,9 @@ Bayesian phylogenetic analysis can be implemented in [MrBayes](http://nbisweden.
 
 
 ### Species delimitation 
-ABGD
-PTP
-RESL
+#### ABGD
+
+#### PTP
+
+#### RESL
 
