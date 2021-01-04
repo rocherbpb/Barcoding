@@ -24,14 +24,14 @@ Potential ways to partition the COI barcode sequence alignment are leave it unpa
 
 ```markdown
 
-## Model selection (unpartitioned)
+### Model selection (unpartitioned)
 iqtree -s input.fasta -m MF
 
 ```
 The range of models tested can be limited to only those implemented in MrBayes using the following commands:
 ```markdown
 
-# Model selection (unpartitioned) using only models available in MrBayes
+## Model selection (unpartitioned) using only models available in MrBayes
 iqtree -s input.fasta -m MF -mset mrbayes
 
 ```
