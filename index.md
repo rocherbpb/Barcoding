@@ -10,6 +10,7 @@ Fasta sequences are entered in the test area under in the "Enter Query Sequence"
 
 ### Exploratory data analysis with trees and networks
 The neighbor-joining (nj) method is frequently used to explore the clustering of sequences data. Trees and networks constructed from this mehtod can be used to test species hyptheses, and identify where species splitting or merging may be occurring. In the case of COI Barcoding analysis, they are typically constructed using K2P distance matrices, and the distance between sequences and tree/network clusters has been frequently used to delimit species-level differences i.e. ~2% K2P distance has been used as a crude species threshold ([Hebert et al 2003a](https://royalsocietypublishing.org/doi/10.1098/rspb.2002.2218), [Hebert et al 2003b](https://royalsocietypublishing.org/doi/10.1098/rsbl.2003.0025)). 
+
 Within a sequence dataset of very closely related species, for example when dealing with data from species complexes, relationships may be better explained by a network rather than a tree. The neigbor-joining network method of [Huson & Bryant 2006](https://academic.oup.com/mbe/article/23/2/254/1118872) offers will display a nj tree when a tree-like signal dominates the seuqnce dataset, whereas it will recover a network (with its conflicting signals) when the data-set is not tree-like. 
 The standard NJ K2P tree can be contructed in [MEGA](https://academic.oup.com/bib/article/5/2/150/330185), while the NJ Network method can be contructed in [SplitsTree](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/splitstree/)
 
@@ -54,6 +55,7 @@ iqtree -s input.fasta -p partition.file -m MF
 
 ```
 The more likely partition can be determined by finding the one with the lower BIC scores (difference should be greater than 10). 
+
 The optimal partition and models can then be specified in the reconstruction of an ML tree using the following commands:
 
 ```markdown
