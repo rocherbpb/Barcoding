@@ -26,7 +26,7 @@ Potential ways to partition the COI barcode sequence alignment are leave it unpa
 
 ```markdown
 
-## Model selection (unpartitioned)
+# Model selection (unpartitioned)
 iqtree -s input.fasta -m MF
 
 ```
