@@ -93,7 +93,7 @@ sump relburnin=yes burninfrac=0.25 filename=test;
 sumt relburnin=yes burninfrac=0.25 contype=allcompat conformat=simple filename=test;
 end;
 ```
-
+See also [here](https://gist.github.com/brantfaircloth/895282) for additional model specifications.
 ### Species delimitation 
 Rather than attempt to discrimtate species by eyeballing branches from a phylogenetic tree, several methods have been developed to implement a more objective and automated approach to species delimiation.
 #### ABGD
