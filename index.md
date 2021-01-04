@@ -1,4 +1,4 @@
-## COI barcoding analysis
+## Basic COI barcoding analysis
 
 Raw data will typically consist of 658bp sequence from the COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. 
 
