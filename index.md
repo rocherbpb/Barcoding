@@ -67,6 +67,32 @@ iqtree -s input.fasta -p optimal_partition.best_scheme.nex -m MFP -B 1000
 #### Bayesian analysis
 Bayesian phylogenetic analysis can be implemented in [MrBayes](http://nbisweden.github.io/MrBayes). Here we can implement the optimum partition models obtained from IQ-Tree (using -mset mrbayes). A typical starting point for this analysis consists of two simultaneous runs, each of which were run with four Metropolis-coupled Markov chain Monte Carlo for 10 million steps, a relative burn-in fraction of 25% and a chain temperature of 0.1. Convergence is considered reached when the average standard deviation of split frequencies between the two simultaneous runs reached 0.01, and the potential scale reduction factor values were all approximately 1.0 in the post-burn-in samples. 
 
+An example block that can be appended to a nexus format alignment is shown below. The models specified for codon positions 1, 2 and 3 are GTR+I+G, HKY+I and GTR, respectively.
+```markdown
+begin mrbayes;
+set autoclose=yes nowarn=yes;
+  charset cd1 = 2-.\3;
+  charset cd2 = 3-.\3;
+  charset cd3 = 1-.\3;
+
+  partition p1 = 3:cd1, cd2, cd3;
+
+  set partition = p1;
+  unlink revmat=(all) statefreq=(all) shape=(all) pinvar=(all)  tratio=(all);
+  prset applyto=(1) statefreqpr=dirichlet(1,1,1,1);
+  prset applyto=(2) statefreqpr=dirichlet(1,1,1,1);
+  prset applyto=(3) statefreqpr=dirichlet(1,1,1,1);
+
+  lset applyto=(1) nst=6 rates=invgamma; 
+  lset applyto=(2) nst=2 rates=propinv; 
+  lset applyto=(3) nst=6; 
+
+log start filename=test.log replace;
+mcmc ngen=10000000 samplefreq=10000 printfreq=10000 nchains=4 filename=test temp=0.10;
+sump relburnin=yes burninfrac=0.25 filename=test;
+sumt relburnin=yes burninfrac=0.25 contype=allcompat conformat=simple filename=test;
+end;
+```
 
 ### Species delimitation 
 Rather than attempt to discrimtate species by eyeballing branches from a phylogenetic tree, several methods have been developed to implement a more objective and automated approach to species delimiation.
