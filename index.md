@@ -102,7 +102,19 @@ Rather than attempt to discrimtate species by eyeballing branches from a phyloge
 The method of [Puillandre et al. 20012](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-294X.2011.05239.x) estimates an intra-specific divergence limit in order to detect a "barcode gap" (first significant gap beyond this divergence estimate) and partition the data into groups. Limit and gap inferences are then applied to each group until there is no further partitioning. This method is implemented in Automatic Barcode Gap Discovery (ABGD), found ([here](https://bioinfo.mnhn.fr/abi/public/abgd/abgdweb.html)).
 
 #### mPTP
-The Multi-rate Poisson Tree Process ([mPTP](https://academic.oup.com/bioinformatics/article/33/11/1630/2929345)) is a tree-based or “phylogeny-aware” method that uses differences in mutation rate in a phylogenetic tree to resolve interspecific and intraspecific diversity. The phylogeneitc trees reconstructed above can be used as the input tree for this analysis. The analysis requires a strictly bifurcating tree, so a Maximum-likelihood tree from IQ-Tree or a Bayesian tree set with Contype=Allcompat from MrBayes is suitable. Minimum branch length was estimated (--minbr_auto) to control for enforced non-zero branch lengths. This tool can be downloaded [here](https://mptp.h-its.org) or used via the [webserver](https://mptp.h-its.org).
+The Multi-rate Poisson Tree Process ([mPTP](https://academic.oup.com/bioinformatics/article/33/11/1630/2929345)) is a tree-based or “phylogeny-aware” method that uses differences in mutation rate in a phylogenetic tree to resolve interspecific and intraspecific diversity. The phylogeneitc trees reconstructed above can be used as the input tree for this analysis. The analysis requires a strictly bifurcating tree, so a Maximum-likelihood tree from IQ-Tree or a Bayesian tree set with Contype=Allcompat from MrBayes is suitable. This tool can be downloaded [here](https://mptp.h-its.org) or used via the [webserver](https://mptp.h-its.org).
+
+Using the command line version, the minimum branch length is first calculated to control for enforced non-zero branch lengths. 
+```markdown
+mptp --tree_file input_tree_file --minbr_auto fasta_alignment_file --output_file output_filename
+```
+The minimum branch length threshold will be printed in the screen and it will also be stored in the output file.
+
+The following command will run Maximum-likelihood species delimitation 
+```markdown
+mptp --tree_file tree_filename --output_file output_filename --mcmc 1000000 --multi --minbr 0.0009330519
+```
+
 
 #### RESL
 Refined Single Linkage (RESL) clusters sequences into operational taxonomic units (OTUs) using a graph analytical approach ([Ratnasingham & Hebert, 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066213)). Analysis is based on a p-distance matrix using the BOLD aligner, implemented in the [Barcode of Life Data (BOLD) Data System v4](http://www.boldsystems.org).
