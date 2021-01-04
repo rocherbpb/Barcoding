@@ -107,3 +107,5 @@ multi-rate Poisson Tree Processes ([mPTP](https://github.com/Pas-Kapli/mptp)) is
 
 #### RESL
 Refined Single Linkage (RESL) clusters sequences into operational taxonomic units (OTUs) using a graph analytical approach ([Ratnasingham & Hebert, 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066213)). Analysis is based on a p-distance matrix using the BOLD aligner, implemented in the [Barcode of Life Data (BOLD) Data System v4](http://www.boldsystems.org).
+
+For each sequence, a BOLD record is first created within a project and the corresponding sequence data is then uploaded to this record. Sequences are then selected (by project or record) and RESL analysis performed by selectiing "cluster sequences" from the "sequence analysis" tools. 
