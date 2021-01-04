@@ -77,4 +77,4 @@ The method of [Puillandre et al. 20012](https://onlinelibrary.wiley.com/doi/abs/
 multi-rate Poisson Tree Processes ([mPTP](https://github.com/Pas-Kapli/mptp)) is a tree-based or “phylogeny-aware” method that uses differences in mutation rate in a phylogenetic tree to resolve interspecific and intraspecific diversity. The phylogeneitc trees reconstructed above can be used as the input tree for this analysis. The analysis requires a strictly bifurcating tree, so a Maximum-likelihood tree from IQ-Tree or a Bayesian tree set with Contype=Allcompat from MrBayes is suitable. Minimum branch length was estimated (--minbr_auto) to control for enforced non-zero branch lengths. 
 
 #### RESL
-
+Refined Single Linkage (RESL) clusters sequences into operational taxonomic units (OTUs) using a graph analytical approach ([Ratnasingham & Hebert, 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066213)). Analysis was based on a p-distance matrix using the BOLD aligner, implemented in the [Barcode of Life Data (BOLD) Data System v4](http://www.boldsystems.org).
