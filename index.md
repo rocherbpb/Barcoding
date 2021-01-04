@@ -104,15 +104,15 @@ The method of [Puillandre et al. 20012](https://onlinelibrary.wiley.com/doi/abs/
 #### mPTP
 The Multi-rate Poisson Tree Process ([mPTP](https://academic.oup.com/bioinformatics/article/33/11/1630/2929345)) is a tree-based or “phylogeny-aware” method that uses differences in mutation rate in a phylogenetic tree to resolve interspecific and intraspecific diversity. The phylogeneitc trees reconstructed above can be used as the input tree for this analysis. The analysis requires a strictly bifurcating tree, so a Maximum-likelihood tree from IQ-Tree or a Bayesian tree set with Contype=Allcompat from MrBayes is suitable. This tool can be downloaded [here](https://mptp.h-its.org) or used via the [webserver](https://mptp.h-its.org).
 
-Using the command line version, the minimum branch length is first calculated to control for enforced non-zero branch lengths. 
+Using the command line version, the minimum branch length is first calculated to control for enforced non-zero branch lengths:
 ```markdown
 mptp --tree_file input_tree_file --minbr_auto fasta_alignment_file --output_file output_filename
 ```
 The minimum branch length threshold will be printed in the screen and it will also be stored in the output file.
 
-The following command will run Maximum-likelihood species delimitation 
+The following command will run Maximum-likelihood species delimitation (minimum branch length of 0.001, from above): 
 ```markdown
-mptp --tree_file tree_filename --output_file output_filename --mcmc 1000000 --multi --minbr 0.0009330519
+mptp --tree_file input_tree_file --output_file output_filename --ml --multi --minbr 0.001
 ```
 
 
