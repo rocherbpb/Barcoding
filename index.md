@@ -14,31 +14,46 @@ Within a sequence dataset of very closely related species, for example when deal
 The standard NJ K2P tree can be contructed in [MEGA](https://academic.oup.com/bib/article/5/2/150/330185), while the NJ Network method can be contructed in [SplitsTree](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/splitstree/)
 
 ### Phylogenetic relationships
-ML
-MrBayes
+Two methods of phylogenetic reconstruction are typically used: Maximum Likelihood (ML) and Bayesian methods.
+#### Maximum likelihood analysis
+The ML method can be implemented in [IQ-Tree](http://www.iqtree.org/). Optimum models and partitions for the sequence alignment can also be found using IQ-Tree.    
+
+Potential ways to partition the COI barcode sequence alignment are leave it unpartitioned or partition by codon position. Finding an optimal model for the unpartitioned alignment can be implemented with the following commands:
+
+
+```markdown
+
+# Model selection
+iqtree -s example.phy -m MF
+# Model selection including ML tree contruction (with ultrafast boostrap appromimation; 1000 reps)
+iqtree -s example.phy -m MF -B 1000
+
+```
+To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
+
+```markdown
+#nexus
+begin sets;
+  charset cd1 = 2-.\3;
+  charset cd2 = 3-.\3;
+  charset cd3 = 1-.\3;
+end;
+
+```
+This partition file is then used in the following commands to determine optimal models for the partitioned alignment
+```markdown
+
+# Model selection
+iqtree -s example.phy -p partition.file -m MF
+# Model selection including ML tree construction (with ultrafast boostrap appromimation; 1000 reps)
+iqtree -s example.phy -p partition.file -m MF -B 1000
+
+```
+The more likely partition can be determined by finding the one with the lower BIC scores (difference should be greater than 10). 
+#### Bayesian analysis
 
 ### Species delimitation 
 ABGD
 PTP
 RESL
-
-```markdown
-Syntax highlighted code block
-
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
 
