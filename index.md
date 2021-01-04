@@ -27,6 +27,13 @@ Potential ways to partition the COI barcode sequence alignment are leave it unpa
 iqtree -s input.fasta -m MF
 
 ```
+The range of models tested can be limited to only those implemented in MrBayes using the following commands:
+```markdown
+
+# Model selection (unpartitioned) using only models available in MrBayes
+iqtree -s input.fasta -m MF -mset mrbayes
+
+```
 The optimal models are output in the ".best_scheme.nex" file
 To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
 
@@ -55,10 +62,9 @@ iqtree -s input.fasta -p optimal_partition.best_scheme.nex -m MFP -B 1000
 
 ```
 
-
-
-
 #### Bayesian analysis
+Bayesian phylogenetic analysis can be implemented in [MrBayes](http://nbisweden.github.io/MrBayes). Here we can implement the optimum partition models obtained from IQ-Tree (using -mset mrbayes). A typical starting point for this analysis consists of two simultaneous runs, each of which were run with four Metropolis-coupled Markov chain Monte Carlo for 10 million steps, a relative burn-in fraction of 25% and a chain temperature of 0.1. Convergence is considered reached when the average standard deviation of split frequencies between the two simultaneous runs reached 0.01, and the potential scale reduction factor values were all approximately 1.0 in the post-burn-in samples. 
+
 
 ### Species delimitation 
 ABGD
