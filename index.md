@@ -23,12 +23,11 @@ Potential ways to partition the COI barcode sequence alignment are leave it unpa
 
 ```markdown
 
-# Model selection
+# Model selection (unpartitioned)
 iqtree -s example.phy -m MF
-# Model selection including ML tree contruction (with ultrafast boostrap appromimation; 1000 reps)
-iqtree -s example.phy -m MF -B 1000
 
 ```
+The optimal models are output in the ".best_scheme.nex" file
 To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
 
 ```markdown
@@ -43,13 +42,23 @@ end;
 This partition file is then used in the following commands to determine optimal models for the partitioned alignment
 ```markdown
 
-# Model selection
+# Model selection (partitioned)
 iqtree -s example.phy -p partition.file -m MF
-# Model selection including ML tree construction (with ultrafast boostrap appromimation; 1000 reps)
-iqtree -s example.phy -p partition.file -m MF -B 1000
 
 ```
 The more likely partition can be determined by finding the one with the lower BIC scores (difference should be greater than 10). 
+The optimal partition and models can then be specified in the reconstruction of an ML tree using the following commands:
+
+iqtree -s example.phy -m MF -B 1000
+```markdown
+# ML tree recontruction (with ultrafast boostrap appromimation; 1000 reps) with optimal models (from optimal partition) specified in "optimal_partition.best_scheme.nex".
+iqtree -s example.phy -p optimal_partition.best_scheme.nex -m MFP -B 1000
+
+```
+
+
+
+
 #### Bayesian analysis
 
 ### Species delimitation 
