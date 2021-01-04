@@ -13,7 +13,14 @@ The neighbor-joining (nj) method is frequently used to explore the culstering of
 Within a sequence dataset of very closely related species, for example when dealing with data from species complexes, relationships may be better explained by a network rather than a tree. The neigbor-joing network method of #### offers will display a nj tree when a tree-like signal dominates the seuqnce dataset, whereas it will recover a network (with its conflicting signals) when the data-set is not tree-like. 
 The standard NJ K2P tree can be contructed in [MEGA](https://academic.oup.com/bib/article/5/2/150/330185), while the NJ Network method can be contructed in [SplitsTree](https://academic.oup.com/mbe/article/23/2/254/1118872).
 
+### Phylogenetic relationships
+ML
+MrBayes
 
+### Species delimitation 
+ABGD
+PTP
+RESL
 
 ```markdown
 Syntax highlighted code block
