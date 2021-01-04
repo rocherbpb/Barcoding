@@ -35,8 +35,9 @@ The range of models tested can be limited to only those implemented in MrBayes u
 iqtree -s input.fasta -m MF -mset mrbayes
 
 ```
-The optimal models are output in the ".best_scheme.nex" file
-To specify codon partitioned data, a nexus file is created with the following format (the COI barcode sequence will typically begin on Codon position 3):
+The optimal models are output in the ".best_scheme.nex" file.
+
+Below is an example of a nexus format codon partition file (the COI barcode sequence will typically begin on Codon position 3):
 
 ```markdown
 #nexus
