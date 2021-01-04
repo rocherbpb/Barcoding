@@ -115,7 +115,7 @@ The following command will run Maximum-likelihood species delimitation (minimum 
 mptp --tree_file input_tree_file --output_file output_filename --ml --multi --minbr 0.001
 ```
 
-The outgroup used in the phylogenetic tree can also be specified and excluded: 
+The outgroup used in the phylogenetic tree can also be specified and excluded from the final species delimitation: 
 ```markdown
 mptp --tree_file input_tree_file --output_file output_filename --ml --multi --minbr 0.001 --outgroup_crop --outgroup outgroup_sequence_name
 ```
