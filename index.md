@@ -4,7 +4,7 @@ Raw data will typically consist of 658bp sequences from the mtDNA COI locus acqu
 
 The first step in the analysis involves the contruction of a sequence alignment. This can be done using the [Muscle](https://academic.oup.com/nar/article/32/5/1792/2380623) algorithm implemented in [SeaView](https://academic.oup.com/mbe/article/27/2/221/970247) (available [here](http://doua.prabi.fr/software/seaview)). Amino acid and codon positions can be determined by [TranslatorX](https://academic.oup.com/nar/article/38/suppl_2/W7/1094709) (available [here](http://translatorx.co.uk)) by running the alignment with "Guess most likely reading frame", "Invertebrate mitochondrial" genetic code, and the Muscle algorithm setting. 
 
-### BOLD search and Blast analysis
+### BOLD and Blast searches
 Sequences are checked BOLD and Blast searches to determine whether matches are consistent with field/morphological identification. In order to use the BOLD workbench, a BOLD record is first created for each sequence within a project. Once created, the corresponding sequence data is then uploaded to this record. Sequences are then selected and searched against the "COI Species Database" (validated) or the "COI Full Database" (unvalidated). 
 
 For a Blast search, fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast (blastn)](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
