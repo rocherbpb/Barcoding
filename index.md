@@ -10,7 +10,7 @@ Sequences are checked BOLD and Blast searches to determine whether matches are c
 
 Sequences are checked via nucleotide blast analysis to determine whether blast matches are consistent with field/morphological identification. When consistent, a COI Barcode reference sequence of the species is included for downstream species delimitation analysis. Any mismatches that occur are noted, and the sequence of the Blast matched species is included in downstream analsysis. Where no field/morphological identification is available, sequences are tentatively identified as matched species. 
 
-Fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast, blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
+Fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast (blastn)](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
 The stringency for a search can be considered BOLD Species Database > BOLD Full Database > blastn. 
 
 ### Exploratory data analysis with trees and networks
