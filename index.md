@@ -9,7 +9,7 @@ Sequences are checked BOLD and Blast searches to determine whether matches are c
 
 For a Blast search, fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast (blastn)](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
 
-Using results of the searches, two of the most divergent sequences of the matched species are included as references in downstream species delimitation analysis. 
+Using results of the searches, two of the most divergent sequences from the matched species are included as references in downstream species delimitation analysis. Also include two of the most divergent sequences from the nearest neighour species i.e. 
 
 Where no field/morphological identification is available, sequences are tentatively identified as the matched species (if >2%, add "near" prefix). 
 
