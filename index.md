@@ -4,11 +4,14 @@ Raw data will typically consist of 658bp sequences from the mtDNA COI locus acqu
 
 The first step in the analysis involves the contruction of a sequence alignment. This can be done using the [Muscle](https://academic.oup.com/nar/article/32/5/1792/2380623) algorithm implemented in [SeaView](https://academic.oup.com/mbe/article/27/2/221/970247) (available [here](http://doua.prabi.fr/software/seaview)). Amino acid and codon positions can be determined by [TranslatorX](https://academic.oup.com/nar/article/38/suppl_2/W7/1094709) (available [here](http://translatorx.co.uk)) by running the alignment with "Guess most likely reading frame", "Invertebrate mitochondrial" genetic code, and the Muscle algorithm setting. 
 
-### Blast analysis
+### BOLD search and Blast analysis
+Sequences are checked BOLD and Blast searches to determine whether matches are consistent with field/morphological identification. In order to use the BOLD workbench, a BOLD record is first created for each sequence within a project. Once created, the corresponding sequence data is then uploaded to this record. Sequences are then selected and searched against the "COI Species Database" (validated) or the "COI Full Database" (unvalidated). 
+
 
 Sequences are checked via nucleotide blast analysis to determine whether blast matches are consistent with field/morphological identification. When consistent, a COI Barcode reference sequence of the species is included for downstream species delimitation analysis. Any mismatches that occur are noted, and the sequence of the Blast matched species is included in downstream analsysis. Where no field/morphological identification is available, sequences are tentatively identified as matched species. 
 
-Fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
+Fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast, blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
+The stringency for a search can be considered BOLD Species Database > BOLD Full Database > blastn. 
 
 ### Exploratory data analysis with trees and networks
 The Neighbor-Joining (NJ) method is frequently used to explore the clustering of sequences data. Trees and networks constructed from this method can be used to test species hypotheses, and identify where species splitting or merging may be occurring. In the case of COI barcoding analysis, they are typically constructed using K2P distance matrices, and the distance between sequences and tree/network clusters has been frequently used to delimit species-level differences i.e. ~2% K2P distance has been used as a crude species threshold ([Hebert et al 2003a](https://royalsocietypublishing.org/doi/10.1098/rspb.2002.2218), [Hebert et al 2003b](https://royalsocietypublishing.org/doi/10.1098/rsbl.2003.0025)). 
