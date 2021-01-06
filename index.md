@@ -1,7 +1,7 @@
 ## Species discovery using COI barcoding
-### Species identification versus species discovery
-Species identification involves matching a query sequence to a sequence in a reference library.
-Species discovery involves characterising barcode diversity and delimiting this diversity into species.  The former relies, ultimately, on the latter.  
+### Specimen identification versus species discovery
+Specimen identification involves matching the specimen or query sequence to sequences in a reference library.
+Species discovery involves characterising barcode diversity, delimiting this diversity into species and, effectively, the creation of a reference library. The former, ultimately, on the latter.  
 
 ### COI Barcode data
 Raw data will typically consist of 658bp sequences from the mtDNA COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. 
@@ -10,6 +10,9 @@ Much of the analyses described below relies on the contruction of a sequence ali
 
 
 ### BOLD and Blast searches
+When a comprehensive barcode reference library exists, specimen identification is achieved by matching the query sequence to reference sequences, based on similarity thresholds and/or membership of clades/clusters.
+
+
 Sequences are checked BOLD and Blast searches to determine whether matches are consistent with field/morphological identification. In order to use the BOLD workbench (found [here](http://www.boldsystems.org)), a BOLD record is first created for each sequence within a project. Once created, the corresponding sequence data is then uploaded to this record. Sequences are then selected and searched against the "COI Species Database" (validated) or the "COI Full Database" (unvalidated). 
 
 For a Blast search, fasta sequences are entered in the test area under in the "Enter Query Sequence" box in [Nucleotide Blast (blastn)](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn). The "standard databases" are searched for "Highly similar sequences."
