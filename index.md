@@ -1,12 +1,13 @@
 ## Species discovery using COI barcoding
 ### Species identification versus species discovery
-Species identification involves matching a query sequence to a species from a reference library.
-Species discovery involves characterising barcode diversity and delimiting this diversity into species.  
+Species identification involves matching a query sequence to a sequence in a reference library.
+Species discovery involves characterising barcode diversity and delimiting this diversity into species.  The former, ultimately, depends on the latter.  
 
 ### COI Barcode data
 Raw data will typically consist of 658bp sequences from the mtDNA COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. 
 
-The first step in the analysis involves the contruction of a sequence alignment. This can be done using the [Muscle](https://academic.oup.com/nar/article/32/5/1792/2380623) algorithm implemented in [SeaView](https://academic.oup.com/mbe/article/27/2/221/970247) (available [here](http://doua.prabi.fr/software/seaview)). Amino acid and codon positions can be determined by [TranslatorX](https://academic.oup.com/nar/article/38/suppl_2/W7/1094709) (available [here](http://translatorx.co.uk)) by running the alignment with "Guess most likely reading frame", "Invertebrate mitochondrial" genetic code, and the Muscle algorithm setting. 
+The first step in many of the analyses described below involves the contruction of a sequence alignment. This can be done using the [Muscle](https://academic.oup.com/nar/article/32/5/1792/2380623) algorithm implemented in [SeaView](https://academic.oup.com/mbe/article/27/2/221/970247) (available [here](http://doua.prabi.fr/software/seaview)). Amino acid and codon positions can be determined by [TranslatorX](https://academic.oup.com/nar/article/38/suppl_2/W7/1094709) (available [here](http://translatorx.co.uk)) by running the alignment with "Guess most likely reading frame", "Invertebrate mitochondrial" genetic code, and the Muscle algorithm setting. Alignments are also performed natively in several analytical tools found in the [BOLD workbench](http://www.boldsystems.org).
+
 
 ### BOLD and Blast searches
 Sequences are checked BOLD and Blast searches to determine whether matches are consistent with field/morphological identification. In order to use the BOLD workbench (found [here](http://www.boldsystems.org)), a BOLD record is first created for each sequence within a project. Once created, the corresponding sequence data is then uploaded to this record. Sequences are then selected and searched against the "COI Species Database" (validated) or the "COI Full Database" (unvalidated). 
@@ -16,6 +17,9 @@ For a Blast search, fasta sequences are entered in the test area under in the "E
 Using results of the searches, two of the most divergent sequences from the matched species are included as references in downstream species delimitation analysis. Also include two of the most divergent sequences from the nearest neighour species i.e. from the next closest species in the query matches. Where no field/morphological identification is available, sequences are tentatively identified as the matched species (if >2%, add "near" prefix). 
 
 The stringency for a query search can be considered BOLD Species Database > BOLD Full Database > blastn. 
+
+
+
 
 ### Exploratory data analysis with trees and networks
 The Neighbor-Joining (NJ) method is frequently used to explore the clustering of sequences data. Trees and networks constructed from this method can be used to test species hypotheses, and identify where species splitting or merging may be occurring. In the case of COI barcoding analysis, they are typically constructed using K2P distance matrices, and the distance between sequences and tree/network clusters has been frequently used to delimit species-level differences i.e. ~2% K2P distance has been used as a crude species threshold ([Hebert et al 2003a](https://royalsocietypublishing.org/doi/10.1098/rspb.2002.2218), [Hebert et al 2003b](https://royalsocietypublishing.org/doi/10.1098/rsbl.2003.0025)). 
