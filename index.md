@@ -1,7 +1,7 @@
 ## Species discovery using COI barcoding
 ### Species identification versus species discovery
 Species identification involves matching a query sequence to a sequence in a reference library.
-Species discovery involves characterising barcode diversity and delimiting this diversity into species.  The former, ultimately, depends on the latter.  
+Species discovery involves characterising barcode diversity and delimiting this diversity into species.  The former relies, ultimately, on the latter.  
 
 ### COI Barcode data
 Raw data will typically consist of 658bp sequences from the mtDNA COI locus acquired via [Folmer et al (1994)](https://pubmed.ncbi.nlm.nih.gov/7881515) primers. 
